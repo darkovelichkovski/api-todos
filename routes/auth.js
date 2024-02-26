@@ -10,6 +10,10 @@ const emails = ["example@email.com"];
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
 
+  if (password === undefined || email === undefined) {
+    return res.status(400).json({ error: "You are doing something wrong" });
+  }
+
   if (password.length < 6 || password.length > 10) {
     return res
       .status(401)

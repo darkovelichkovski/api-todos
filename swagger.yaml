@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
   title: Todo API
-  description: A simple API for managing todos
+  description: A simple API for managing todos. <br> All requests are token protected expect the /login request. <br> Use this request to login new users and create token. <br> Once you have the token you can added it in the header for your request as Authorization {your_token} <br>
   version: 1.0.0
 
 paths:
-  /login:
+  auth/login:
     post:
       summary: Authenticate and obtain a token
       requestBody:
@@ -34,7 +34,7 @@ paths:
                     type: string
                     example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAbWFpbC5jb20ifQ.XxxxXxxxXxxx"
 
-  /users:
+  auth/users:
     post:
       summary: Get all registered users
       requestBody:
@@ -181,9 +181,6 @@ components:
     Todo:
       type: object
       properties:
-        id:
-          type: integer
-          example: 1
         title:
           type: string
           example: Learn Postman
