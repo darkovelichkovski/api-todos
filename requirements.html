@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Requirements</title>
+    <style>
+        /* ... your existing CSS styles ... */
+        
+        details {
+            /* Customize these styles as needed */
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: default;
+        }
+        
+        details summary {
+            /* Customize these styles as needed */
+            list-style: none;
+            font-weight: bold;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        
+        details[open] summary {
+            /* Optionally style open states differently */
+        }
+        
+        details p {
+            /* Customize these styles as needed */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <details class="requirement" style="background-color: #ffffff; border-color: #6a6767; border-radius: 8px;">
+            <summary style="font-weight: bold; color: #000000 ">Password requirements</summary>
+            <p>Must be between 6 and 10 characters.</p>
+            <p>Must be a string</p>
+        </details>        
+        <details class="requirement" style="background-color: #ffffff; border-color: #6a6767; border-radius: 8px;">
+            <summary>Email requirement</summary>
+            <p>Must be in a valid email format</p>
+        </details>
+        <details class="requirement" style="background-color: #ffffff; border-color: #6a6767; border-radius: 8px;">
+            <summary>Todos order</summary>
+            <p>Every time you run the application you will see 2 default todos</p>
+            <p>Todos are orders by ID, ascending</p>
+        </details>
+        <details class="requirement" style="background-color: #ffffff; border-color: #6a6767; border-radius: 8px;">
+            <summary>Create new todo</summary>
+            <p>Title field is requreid field and type string</p>
+            <p>Complete field is requreid field and type boolean</p>
+        </details>
+        <details class="requirement" style="background-color: #ffffff; border-color: #6a6767; border-radius: 8px;">
+            <summary>Delete todo</summary>
+            <p>Todo can be deleted if exists</p>
+            <p>Error message is returned if todo doesn't exists</p>
+        </details>
+    </div>
+</body>
+</html>
