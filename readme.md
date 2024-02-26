@@ -35,3 +35,5 @@ Once the server is up and running in the browser navigate to
 Once the server is up and running in the browser navigate to
 
 `http://localhost:3001/requirements`
+
+NOTE: if you change the port do not forget to update the urls above
